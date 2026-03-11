@@ -30,8 +30,18 @@ public class Main {
             System.out.println("Установите облегченную версию приложения для Android по ссылке:");
         }
     }
-    public static void countDeliveryDays(int deliveryDistance){
 
+    public static void countDeliveryDays(int deliveryDistance) {
+        System.out.println("Задача 3");
+        if (deliveryDistance >= 0 && deliveryDistance <= 20) {
+            System.out.println("Потребуется дней: " + 1);
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            System.out.println("Потребуется дней: " + 2);
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется дней: " + 3);
+        } else {
+            System.out.println("Доставки нет ");
+        }
     }
 }
 

@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         checkYear(2023);
-        checkDeviceOS(0, 2020);
+        checkDeviceOS(1, 2000);
         //task3();
     }
 

@@ -4,8 +4,8 @@ public class Main {
     public static void main(String[] args) {
         checkYear(2023);
         int currentYear = LocalDate.now().getYear();
-        checkDeviceOS(1, 2011);
-        countDeliveryDays(95);
+        checkDeviceOS(0, 2011);
+        countDeliveryDays(61);
     }
 
     public static void checkYear(int year) {
@@ -19,10 +19,15 @@ public class Main {
 
     public static void checkDeviceOS(int clientOS, int clienDeviceYear) {
         System.out.println("Задача 2");
-        if (clientOS == 0) {
-            System.out.println("Установите версию приложения для iOS по ссылке:");
-        } else if (clientOS == 1) {
-            System.out.println("Установите версию приложения для Android  по ссылке:");
+        switch (clientOS) {
+            case 0:
+                System.out.println("Установите версию приложения для iOS по ссылке:");
+                break;
+            case 1:
+                System.out.println("Установите версию приложения для Android по ссылке:");
+                break;
+            default:
+                System.out.println("не правильно выбран параметр ОС");
         }
         if (clientOS == 0 && clienDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке:");
@@ -44,6 +49,7 @@ public class Main {
         }
     }
 }
+
 
 
 
